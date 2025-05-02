@@ -10,7 +10,8 @@ pipeline {
           }
       }
       stage('SonarQube analysis') {
-          environment = tool 'ashutosh-sonarqube-scanner'
+          environment { 
+              scannerhome = tool 'ashutosh-sonarqube-scanner'
           }
          
           steps {
